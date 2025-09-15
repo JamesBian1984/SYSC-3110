@@ -17,12 +17,17 @@ public class BuddyInfo {
     public String getName() {
         return name;
     }
+
+    public int getNumber() {
+        return phone_number;
+    }
     public static void main(String[] args) {
         BuddyInfo buddy1 = new BuddyInfo("Homer", 1800, "addr");
         System.out.println("Hello, " + buddy1.name);
 
 
     }
+
 }
 
 

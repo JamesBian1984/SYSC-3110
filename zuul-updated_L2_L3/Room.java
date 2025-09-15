@@ -17,7 +17,7 @@ import java.util.*;
 public class Room 
 {
     public String description;
-    public Map<String,Room> exits;
+    private Map<String,Room> exits;
     public static final String NORTH = "north";
     public static final String EAST = "east";
 
@@ -31,8 +31,9 @@ public class Room
         this.description = description;
         exits = new HashMap<>();
     }
-  public Room getExits(String direction){
-      return exits.get(direction);
+    public Room getExit(String direction){
+        return exits.get(direction);
+
     
     }
     
@@ -44,20 +45,9 @@ public class Room
      * @param south The south exit.
      * @param west The west exit.
      */
-    public void setExits(Room north, Room east, Room south, Room west) 
+    public void setExit(String direction, Room exit) 
     {
-        if(north != null) {
-            exits.put(NORTH, north);
-        }
-        if(east != null) {
-            exits.put(EAST,east);
-        }
-        if(south != null) {
-            exits.put("south", south);
-        }
-        if(west != null) {
-            exits.put("west", west);
-        }
+        exits.put(direction, exit);
     }
 
   
