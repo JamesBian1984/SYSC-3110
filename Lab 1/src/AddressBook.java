@@ -30,6 +30,7 @@ public class AddressBook {
         boolean joe_Added = addressBook.addBuddy("Joe", 1234, "Kanata");
         BuddyInfo gone = addressBook.removeBuddy("Joe",1234);
         BuddyInfo gone2 = addressBook.removeBuddy("John",123);
+        System.out.println("x");
     }
 
 }
